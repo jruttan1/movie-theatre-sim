@@ -44,6 +44,13 @@ public class Ticket {
         }
     }
 
+    public static void releaseSeat(int row, int col) {
+        if (row >= 0 && row < seats.length && col >= 0 && col < seats[0].length) {
+            seats[row][col] = "0";
+            System.out.println("Seat at [" + row + "][" + col + "] is now open.");
+        }
+    }
+
     public Movie getMovie() {
         return movie;
     }

@@ -2,14 +2,14 @@ public class Movie {
     // instance variables
     private String title;
     private String genre;
-    private int rating;
+    private String rating;
     private double score;
     private String director;
     private String[] actors;
     private int year;
 
     // Constructor
-    public Movie(String title, String genre, int duration, int rating, double score, String director, String[] actors, int year) {
+    public Movie(String title, String genre, int duration, String rating, double score, String director, String[] actors, int year) {
         this.title = title; // this refers to the current object
         this.genre = genre; // implicit parameter "this" is used to refer to the current object
         this.rating = rating;
@@ -28,7 +28,7 @@ public class Movie {
         return genre;
     }
 
-    public int getRating() {
+    public String getRating() {
         return rating;
     }
 
@@ -56,7 +56,7 @@ public class Movie {
         this.genre = genre;
     }
 
-    public void setRating(int rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 
