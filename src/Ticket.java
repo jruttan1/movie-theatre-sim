@@ -6,7 +6,7 @@ public class Ticket {
     private double price;
 
     // Creates size of theater
-    private static String[][] seats = new String[10][15]; // 2D array of seats size 10x15
+    public static String[][] seats = new String[10][15]; // 2D array of seats size 10x15
 
     static { // static block that initializes the seat array as being all available
         for (int i = 0; i < seats.length; i++) {
@@ -25,7 +25,7 @@ public class Ticket {
     }
 
     // Method to reserve a seat
-    public static boolean isAvailable(int row, int col) {
+    public boolean isAvailable(int row, int col) {
         if (row >= 0 && row < seats.length && col >= 0 && col < seats[0].length) {
             if (seats[row][col].equals("0")) {
                 seats[row][col] = "1";
